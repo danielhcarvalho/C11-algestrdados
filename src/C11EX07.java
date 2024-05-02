@@ -29,13 +29,7 @@ public class C11EX07
                     break;
                     
                 } else if (temperatura > maiorTemperatura) 
-                {
-                    maiorTemperatura = temperatura;
-                }
-
-                if (temperatura <= menorTemperatura) 
-                {
-                    menorTemperatura = temperatura;    
+                {awdjasdQAdoçpasC ASF WfasDAS.DNaNMDLÇA
                 }
 
                 System.out.printf("%.2f %.2f %.2f ");
