@@ -25,8 +25,9 @@ public class C11EX07
 
                 if (temperatura >= 485) 
                 {
-                    break
                     System.out.println("CÓDIGO FINALIZADO!");
+                    break;
+                    
                 } else if (temperatura > maiorTemperatura) 
                 {
                     maiorTemperatura = temperatura;
