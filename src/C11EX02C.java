@@ -17,7 +17,7 @@ public class C11EX02C
         {
             aplicado = Double.parseDouble(JOptionPane.showInputDialog(null,
                     "Informe o valor aplicado pelo cliente:",
-                    "Exercício 02c",
+                    "Exercício 02a",
                     JOptionPane.QUESTION_MESSAGE));
             total += aplicado;
 
@@ -49,7 +49,7 @@ public class C11EX02C
 
             nome = JOptionPane.showInputDialog(null,
                     "Informe o nome do cliente:",
-                    "Exercício 02c",
+                    "Exercício 02a",
                     JOptionPane.QUESTION_MESSAGE);
 
         }
