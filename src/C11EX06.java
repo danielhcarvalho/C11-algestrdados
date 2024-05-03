@@ -11,7 +11,7 @@ public class C11EX06
 
 
 
-        for (int i = 1; i <= 3; i++) 
+        for (int i = 1; i <= 100; i++) 
         {
             canal = JOptionPane.showOptionDialog(null, 
             "Informe o canal que estava sendo assistido na casa:", 

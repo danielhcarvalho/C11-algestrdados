@@ -4,43 +4,36 @@ public class C11EX07
 {
     public static void main(String[] args) 
     {
-        double temperatura, maiorTemperatura = Double.MIN_VALUE, menorTemperatura = Double.MAX_VALUE, media = 0, diasMuitoQuentes = 0, dia;
-    
-        for (dia = 1; dia <= 121; dia++)
+        double temperatura, menorTemperatura = Double.MAX_VALUE, maiorTemperatura = Double.MIN_VALUE, media = 0;
+        int repMaiorTemp = 0, i;
+
+        for (i = 1; i <= 121; i++) 
         {
-            temperatura = Double.parseDouble(JOptionPane.showInputDialog(null,
-            "Informe a temperatura do dia " + (int) dia,
+            temperatura = Double.parseDouble(JOptionPane.showInputDialog(null, 
+            "Informe a temperatura do dia " + i,
             "Exercício 07",
             JOptionPane.QUESTION_MESSAGE));
 
-            while (temperatura < 485)
+            media += temperatura;
+
+            if (i == 1 || temperatura < menorTemperatura)
             {
-                media += temperatura;
-                System.out.println("batata");
+                menorTemperatura = temperatura;
+            }
+            if (i == 1 || temperatura > maiorTemperatura) 
+            {
+                maiorTemperatura = temperatura;
+                repMaiorTemp = 1;
 
-                temperatura = Double.parseDouble(JOptionPane.showInputDialog(null,
-                "Informe a temperatura do dia " + (int) dia,
-                "Exercício 07",
-                JOptionPane.QUESTION_MESSAGE));
-
-                if (temperatura >= 485) 
-                {
-                    System.out.println("CÓDIGO FINALIZADO!");
-                    break;
-                    
-                } else if (temperatura > maiorTemperatura) 
-                {
-                    maiorTemperatura = temperatura;
-                }
-
-                if (temperatura <= menorTemperatura) 
-                {
-                    menorTemperatura = temperatura;    
-                }
-
-                System.out.printf("%.2f %.2f %.2f ");
+            } else if (temperatura == maiorTemperatura) 
+            {
+                repMaiorTemp++;
             }
         }
+        media /= (i - 1);
+
+        System.out.printf("A MENOR TEMPERATURA FOI %.1f °C\nA MAIOR TEMPERATURA FOI %.1f °C\nA MÉDIA DAS TEMPERATURA ENTRE JANEIRO E ABRIL FOI DE %.1f °C\nA MAIOR TEMPERATURA (%.1f °C) ocorreu %d dias", menorTemperatura, maiorTemperatura, media, maiorTemperatura, repMaiorTemp);
+        System.out.println();
 
     }
 
