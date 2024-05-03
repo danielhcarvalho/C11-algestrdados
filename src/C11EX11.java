@@ -5,7 +5,6 @@ public class C11EX11
     public static void main(String[] args) 
     {
         int num;
-        String impressão;
 
         num = Integer.parseInt(JOptionPane.showInputDialog(null,
         "Informe o número de repetições:",
